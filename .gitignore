@@ -1,0 +1,20 @@
+# Thư mục node_modules
+node_modules/
+
+# File môi trường
+.env
+
+# Các file log
+*.log
+
+# Thư mục build hoặc dist
+dist/
+build/
+
+# Hệ điều hành
+.DS_Store
+Thumbs.db
+
+# IDE/editor
+.vscode/
+.idea/
