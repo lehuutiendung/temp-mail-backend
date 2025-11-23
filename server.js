@@ -45,6 +45,15 @@ const MAILTM_API = 'https://api.mail.tm';
 
 const randString = (len = 10) => Math.random().toString(36).slice(2, 2 + len);
 
+// Healthcheck endpoint
+app.get("/api/health", (req, res) => {
+  res.status(200).json({
+    status: "ok",
+    uptime: process.uptime(),
+    timestamp: Date.now()
+  });
+});
+
 // Get available domains
 app.get('/api/domains', generalLimiter, async (req, res) => {
   try {
